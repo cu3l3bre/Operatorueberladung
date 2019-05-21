@@ -52,6 +52,17 @@ Punkt operator+(Punkt punkt1, Punkt punkt2)
 
 
 
+// Verwendung von << als überladenen Operator
+ostream& operator<<(ostream& ausgabe, Punkt punkt)
+{
+	ausgabe << "Wert von x: " << punkt.x << endl;
+	ausgabe << "Wert von y: " << punkt.y << endl;
+	return ausgabe;
+}
+
+
+
+
 
 int main()
 {
@@ -80,6 +91,8 @@ int main()
 
 	Punkt p4 = p1 + p2;
 	cout << p4.x << " " << p4.y << endl;
+
+	cout << p4 << " blub " <<  endl;
 	
 
 
